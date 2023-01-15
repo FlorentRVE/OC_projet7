@@ -1,0 +1,24 @@
+.header {
+    width: 100vw;
+
+}
+
+.menu {
+    display: flex;
+    /* background-color: blue; */
+  }
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 35px;
+    width: 94%;
+  }
+
+.menuItem {
+    margin-right: 3rem;
+    color: red;
+    text-decoration: none;
+}

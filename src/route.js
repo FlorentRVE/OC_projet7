@@ -1,18 +1,17 @@
 import Home from './component/Home';
 import About from './component/About';
-import Contact from './component/Contact';
+import Error from './component/Error';
+import Logement from './component/Logement';
+
 import {createBrowserRouter} from "react-router-dom";
   
   const router = createBrowserRouter([
     
-    {path: "/",
-    element: <Home />},
+    {path: "/", element: <Home />, errorElement:<Error />},
         
-    {path: "/contact",
-    element: <Contact />},
-        
-    {path: "/about",
-    element: <About />}
+    {path: "/about", element: <About />, errorElement:<Error />},
+
+    { path: "/logement/:id", element: <Logement />, errorElement:<Error />}
 
   ]);
 

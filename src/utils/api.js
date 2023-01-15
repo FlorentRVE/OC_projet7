@@ -2,36 +2,17 @@
 
 const API_BASE_URL = './data/logements.json';
 
-export const getData = () => {
-  return fetch(API_BASE_URL).then((response) => response.json());
+export const getData = async () => {
+  return await fetch(API_BASE_URL).then((response) => response.json());
 };
 
-// export const getPropertyById = (id) => {
-//   return fetch(`${API_BASE_URL}/properties/${id}`).then((response) => response.json());
-// };
+export const getItem = async (id) => {
+  try {
+    const response = await fetch(API_BASE_URL);
+    const data = await response.json();
+    return data.filter(item => item.id === id);
+  } catch (error) {
+    console.error(error);
+  }
+};
 
-// export const createProperty = (data) => {
-//   return fetch(`${API_BASE_URL}/properties`, {
-//     method: 'POST',
-//     body: JSON.stringify(data),
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//   }).then((response) => response.json());
-// };
-
-// export const updateProperty = (id, data) => {
-//   return fetch(`${API_BASE_URL}/properties/${id}`, {
-//     method: 'PUT',
-//     body: JSON.stringify(data),
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//   }).then((response) => response.json());
-// };
-
-// export const deleteProperty = (id) => {
-//   return fetch(`${API_BASE_URL}/properties/${id}`, {
-//     method: 'DELETE',
-//   }).then((response) => response);
-// }

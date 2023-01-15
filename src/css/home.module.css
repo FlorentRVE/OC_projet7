@@ -1,0 +1,39 @@
+.image {
+  background-color: black;
+  border-radius: 15px;
+  width: auto;
+  height: 5rem;
+
+  margin-bottom: 5px;
+}
+
+.title {
+  color: red;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(209, 224, 212);
+    border-radius: 15px;
+}
+
+.item {
+  display:flex;
+  flex-direction: column;
+  height: 150px;
+  width: 100%;
+  margin: 5px;
+
+  background-color: orange;
+  border-radius: 15px;
+}
+
+.itemImage {
+  height: 150px;
+  width: 150px;
+}
+
+.itemTitle {
+  text-decoration: none;
+}
