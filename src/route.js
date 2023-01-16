@@ -1,7 +1,7 @@
-import Home from './component/Home';
-import About from './component/About';
+import Home from './component/Home/Home';
+import About from './component/About/About';
 import Error from './component/Error';
-import Logement from './component/Logement';
+import Logement from './component/Logement/Logement';
 
 import {createBrowserRouter} from "react-router-dom";
   
