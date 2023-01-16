@@ -6,10 +6,10 @@
   justify-content: center;
   background-color: black;
   border-radius: 15px;
-  width: auto;
+  width: 90%;
   height: 5rem;
 
-  margin-bottom: 5px;
+  margin: 0.4rem auto .4rem auto
 }
 
 .imageTxt {
@@ -20,27 +20,33 @@
 /* ============= Composant grid ============== */
 
 .container {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    background-color: rgb(209, 224, 212);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    background-color: rgb(255, 255, 255);
     border-radius: 15px;
+    width: 90%;
+    margin: 0 auto;
+
 }
 
 .item {
+  flex-grow: 1;
+
   display:flex;
   flex-direction: column;
-  height: 150px;
-  width: 30%;
-  margin: 5px;
+  justify-content: flex-end;
+  height: 250px;
 
   background-color: orange;
   border-radius: 15px;
 }
 
-.itemImage {
-  height: 150px;
-  width: 150px;
-}
-
 .itemTitle {
+  color: red;
   text-decoration: none;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  width: 5rem;
 }
