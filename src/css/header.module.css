@@ -1,24 +1,22 @@
 .header {
     width: 100vw;
-
 }
-
-.menu {
-    display: flex;
-    /* background-color: blue; */
-  }
 
 .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
-    height: 35px;
-    width: 94%;
+    height: 65px;
+    background-color: rgb(231, 237, 235);
   }
 
+.menu {
+    display: flex;
+}
+
 .menuItem {
-    margin-right: 3rem;
+    margin-right: 1rem;
     color: red;
     text-decoration: none;
+    text-transform: uppercase;
 }

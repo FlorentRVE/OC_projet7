@@ -4,19 +4,23 @@
     align-items: center;
     background-color: red;
     padding: 0 1rem;
-    border-radius: 10px;
+    border-radius: 5px;
+    height: 2rem;
 }
 
-.title {
+.title, .arrow {
     font-size: 1rem;
+    color: aliceblue;
 }
 
 .collapse {
-    height: 200px;
+    height: auto;
+    padding-bottom: 1rem;
+    color: rgb(232, 81, 81);
 }
 
 .div, .collapse {
-    background-color: brown;
+    background-color: rgb(243, 235, 235);
     width: 90%;
     margin: 1rem auto;
     border-radius: 15px;
