@@ -1,4 +1,4 @@
-.container {
+.titleBox {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,10 +19,22 @@
     color: rgb(232, 81, 81);
 }
 
-.div, .collapse {
+.container, .collapse {
     background-color: rgb(243, 235, 235);
     width: 90%;
     margin: 1rem auto;
     border-radius: 15px;
 
+}
+
+/* ============== Gestion Collapse ================ */
+
+.isClosed {
+    overflow: hidden;
+    transition: height 1s ease-out;
+    height: 0;
+}
+
+.isOpen {
+    height: auto;
 }

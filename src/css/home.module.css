@@ -24,7 +24,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     gap: 0.4rem;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(196, 179, 179);
     border-radius: 15px;
     width: 90%;
     margin: 0 auto;
@@ -49,4 +49,19 @@
   font-size: 0.8rem;
   margin-left: 0.5rem;
   width: 5rem;
+}
+
+
+/* =================== Media query =================*/
+
+@media screen and (min-width: 480px) {
+  .container {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .item {
+    width: 250px;
+
+  }
 }

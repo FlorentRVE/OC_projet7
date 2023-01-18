@@ -4,14 +4,21 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import * as api from '../../utils/api';
+
+
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import styles from '../../css/logement.module.css'
 
-const LogementDescription = () => {
+const LogementDescription = (props) => {
 
   const params = useParams();
   const id = params.id;
 
   const [data, setData] = useState([]);
+  const [collapse, setCollapse] = useState(styles.isClosed);
   
   useEffect(() => {
     api.getItem(id).then((data) => {
@@ -21,23 +28,24 @@ const LogementDescription = () => {
 
   return (
 
-    <div>
-
-        <div className= {styles.container}>
-
-          {data.map((item) => (
+    <div className= {styles.collapseDiv}>
+      
+      {data.map((item) => (
             
-            <div id={item.id} className= {styles.item}>
+        <div id={item.id} className= {styles.item}>
 
-              <div>
-
-                <h3>Description</h3>
-                <p>{item.description}</p>
+              <div className= {styles.div}>
+                <div className= {styles.collapseContainer} onClick={() => setCollapse(collapse === styles.isClosed ? styles.isOpen : styles.isClosed)}>
+                  <h2 className= {styles.collapseTitle}>Description</h2>
+                  <FontAwesomeIcon icon={collapse === styles.isClosed ? faChevronDown : faChevronUp} className={styles.arrow}/>
+                </div>
+                <div className={collapse}>
+                  <p className= {styles.collapseText}>description à venir</p>
+                </div>
               </div>
-            </div>
-          ))}      
-        </div>    
-    </div>
+        </div>
+      ))}      
+    </div>    
   );
 };
 

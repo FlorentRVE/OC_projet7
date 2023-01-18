@@ -22,31 +22,34 @@ const LogementInformation = () => {
   return (
     <div>
 
-      <div className= {styles.container}>
+      <div>
 
         {data.map((item) => (
             
-          <div id={item.id} className= {styles.item}>
+          <div id={item.id} className= {styles.infoContainer}>
 
-            <div>
 
-                <div>
+            <div className= {styles.infoLocation}>
 
-                  <h1 className= {styles.itemTitle}>{item.title}</h1>
+                  <h1>{item.title}</h1>
                   <h2>{item.location}</h2>
-                  <p>{item.tags}</p>
-                </div>
+
+                  <div className= {styles.infoTagsContainer}>
+                    {item.tags.map(element => (
+                      <p className= {styles.infoTagsItem}>{element}</p>
+                    ))}
+                  </div>
             </div>
 
-            <div>
+            <div className= {styles.hostContainer}>
 
-                <div>
+                <div className= {styles.hostInfo}>
 
-                  <p>{item.host.name}</p>
-                  <img src={item.host.picture} className= {styles.itemImage} alt='description'/>
+                  <p className= {styles.hostName}>{item.host.name}</p>
+                  <img src={item.host.picture} className= {styles.hostImage} alt='description'/>
                 </div>
                 
-                <p>{item.rating}</p>
+                <p className= {styles.hostRating}>{item.rating}</p>
             </div>
 
           </div>

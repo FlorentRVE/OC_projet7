@@ -1,12 +1,151 @@
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgb(28, 190, 60);
-    border-radius: 15px;
-
+.collapseFlex {
+  display: flex;
+  flex-direction: column;
 }
+
+/* ======================= Carrousel ================== */
 
 img {
   height: auto;
   width: 100%;
+}
+
+
+/*============ Information location et host ============== */
+
+.infoContainer {
+
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 480px) {
+  .infoContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.infoLocation {
+  background-color: rgb(215, 208, 208);
+}
+
+.infoLocation > h1, h2 {
+  color: rgb(228, 12, 12);
+}
+
+.infoLocation > h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.infoLocation > h2 {
+  font-size: 1rem;
+}
+
+.infoTagsContainer {
+  display: flex;
+}
+
+.infoTagsItem {
+  background-color: rgb(176, 38, 38);
+  border-radius: 5px;
+  color: white;
+  margin: 0 0.5rem;
+  padding: 0.1rem 0.5rem;
+}
+
+/* ========== host ============*/
+
+.hostContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hostInfo {
+  background-color: rgb(142, 34, 213);
+  display: flex;
+  order: 2;
+}
+
+.hostInfo > img {
+  height: auto;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.hostRating {
+  order: 1;
+}
+
+/*============ Description et équipement ============== */
+
+.collapseDiv {
+  margin: 1.5rem auto;
+  flex: 1;
+  width: 100%;
+}
+
+.div {
+  background-color: rgb(240, 245, 245);
+}
+.collapseContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: red;
+  padding: 0 1rem;
+  border-radius: 5px;
+  height: 2rem;
+}
+
+.collapseTitle, .arrow {
+  font-size: 1rem;
+  color: aliceblue;
+}
+
+.collapseText {
+  height: auto;
+  padding: 0.5rem;
+  color: rgb(232, 81, 81);
+}
+
+.collapseTextEquipement {
+  height: auto;
+  line-height: 0.1rem;
+  color: rgb(232, 81, 81);
+}
+
+/* ============== Gestion Collapse ================ */
+
+.isClosed {
+  overflow: hidden;
+  transition: height 1s ease-out;
+  height: 0;
+}
+
+.isOpen {
+  height: auto;
+}
+
+
+/* ======================= Media query ============================= */
+
+@media screen and (min-width: 480px) {
+  .collapseFlex {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .hostContainer {
+    flex-direction: column;
+  }
+
+  .hostInfo {
+    order: 1;
+  }
+
+  .hostRating {
+    order: 2;
+  }
 }

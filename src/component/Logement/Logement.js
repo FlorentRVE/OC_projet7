@@ -9,6 +9,8 @@ import LogementDescription from './Logement_description';
 import LogementEquipement from './Logement_equipement';
 import Footer from '../Footer';
 
+import styles from '../../css/logement.module.css'
+
 const Logement = () => {
 
   return (
@@ -20,9 +22,13 @@ const Logement = () => {
 
       < LogementInformation />
 
+      <div className= {styles.collapseFlex}>
+
       < LogementDescription />
 
       < LogementEquipement />
+
+      </div>
 
       <Footer />
     

@@ -7,9 +7,9 @@ import {createBrowserRouter} from "react-router-dom";
   
   const router = createBrowserRouter([
     
-    {path: "/", element: <Home />, errorElement:<Error />},
+    { path: "/", element: <Home />, errorElement:<Error />},
         
-    {path: "/about", element: <About />, errorElement:<Error />},
+    { path: "/about", element: <About />, errorElement:<Error />},
 
     { path: "/logement/:id", element: <Logement />, errorElement:<Error />}
 
