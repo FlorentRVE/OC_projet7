@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import * as api from '../../utils/api';
 import styles from '../../css/logement.module.css'
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const LogementInformation = () => {
 
@@ -49,7 +51,15 @@ const LogementInformation = () => {
                   <img src={item.host.picture} className= {styles.hostImage} alt='description'/>
                 </div>
                 
-                <p className= {styles.hostRating}>{item.rating}</p>
+                <div className= {styles.hostRatingFlex}>
+
+                  <p className= {styles.hostRatingGrey}>{item.rating}</p>
+                  <FontAwesomeIcon className= {styles.hostRatingOrange}icon= {faStar} />
+                  <FontAwesomeIcon className= {styles.hostRatingGrey}icon= {faStar} />
+                  <FontAwesomeIcon className= {styles.hostRatingGrey}icon= {faStar} />
+                  <FontAwesomeIcon className= {styles.hostRatingGrey}icon= {faStar} />
+                  <FontAwesomeIcon className= {styles.hostRatingGrey}icon= {faStar} />
+                </div>
             </div>
 
           </div>

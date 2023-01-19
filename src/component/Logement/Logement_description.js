@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import styles from '../../css/logement.module.css'
 
-const LogementDescription = (props) => {
+const LogementDescription = () => {
 
   const params = useParams();
   const id = params.id;
@@ -40,7 +40,7 @@ const LogementDescription = (props) => {
                   <FontAwesomeIcon icon={collapse === styles.isClosed ? faChevronDown : faChevronUp} className={styles.arrow}/>
                 </div>
                 <div className={collapse}>
-                  <p className= {styles.collapseText}>description à venir</p>
+                  <p className= {styles.collapseText}>{item.description}</p>
                 </div>
               </div>
         </div>

@@ -5,9 +5,41 @@
 
 /* ======================= Carrousel ================== */
 
-img {
-  height: auto;
+
+.carouselDiv  {
+  position: relative;
+
+}
+
+.carrouselImage {
+  height: 300px;
   width: 100%;
+  top: 250px;
+  object-fit: cover;
+}
+
+.carrouselArrow {
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+  left: 0;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+
+  width: 97%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.carrouselLength {
+  position: absolute;
+  bottom: 0;
+  right: 45%;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+
 }
 
 
@@ -60,6 +92,7 @@ img {
 .hostContainer {
   display: flex;
   justify-content: space-between;
+  background-color: rgb(43, 150, 226);
 }
 
 .hostInfo {
@@ -74,8 +107,21 @@ img {
   border-radius: 50%;
 }
 
-.hostRating {
+.hostRatingFlex {
+  display: flex;
+  margin-right: 0.2rem;
+  align-items: center;
   order: 1;
+}
+
+.hostRatingGrey {
+
+  color: grey;
+}
+
+.hostRatingOrange {
+
+  color: rgb(240, 90, 21);
 }
 
 /*============ Description et équipement ============== */
@@ -145,7 +191,7 @@ img {
     order: 1;
   }
 
-  .hostRating {
+  .hostRatingFlex {
     order: 2;
   }
 }
