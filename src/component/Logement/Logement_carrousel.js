@@ -17,7 +17,7 @@ const LogementCarrousel = () => {
   const id = params.id;
 
   const [data, setData] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [Index, setIndex] = useState(0);
   
   useEffect(() => {
     api.getItem(id).then((data) => {
@@ -26,15 +26,13 @@ const LogementCarrousel = () => {
   }, [id]);
 
   const previousImage = () => {
-    const newIndex = currentIndex - 1;
-    setCurrentIndex(newIndex < 0 ? data[0].pictures.length - 1 : newIndex);
-    console.log(data)
+    const newIndex = Index - 1;
+    setIndex(newIndex < 0 ? data[0].pictures.length - 1 : newIndex);
 }
 
   const nextImage = () => {
-    const newIndex = currentIndex + 1;
-    setCurrentIndex(newIndex === data[0].pictures.length ? 0 : newIndex);
-    console.log(data)
+    const newIndex = Index + 1;
+    setIndex(newIndex === data[0].pictures.length ? 0 : newIndex);
 }
 
   return (
@@ -45,7 +43,7 @@ const LogementCarrousel = () => {
             
         <div id={item.id} className={styles.carouselDiv}>
 
-          <img src={item.pictures[currentIndex]} className= {styles.carrouselImage} alt='description'/>
+          <img src={item.pictures[Index]} className= {styles.carrouselImage} alt='description'/>
 
 
             <div className={styles.carrouselArrow}>
@@ -53,7 +51,7 @@ const LogementCarrousel = () => {
               <FontAwesomeIcon onClick={nextImage} icon= { faChevronRight } />
             </div>
 
-            <p className= {styles.carrouselLength}>{currentIndex + 1 + '/' + data[0].pictures.length}</p>
+            <p className= {styles.carrouselLength}>{Index + 1 + '/' + data[0].pictures.length}</p>
 
         </div>
 

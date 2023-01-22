@@ -22,7 +22,6 @@ const LogementInformation = () => {
   }, [id]);
 
   return (
-    <div>
 
       <div>
 
@@ -53,12 +52,11 @@ const LogementInformation = () => {
                 
                 <div className= {styles.hostRatingFlex}>
 
-                  <p className= {styles.hostRatingGrey}>{item.rating}</p>
-                  <FontAwesomeIcon className= {styles.hostRatingOrange}icon= {faStar} />
-                  <FontAwesomeIcon className= {styles.hostRatingGrey}icon= {faStar} />
-                  <FontAwesomeIcon className= {styles.hostRatingGrey}icon= {faStar} />
-                  <FontAwesomeIcon className= {styles.hostRatingGrey}icon= {faStar} />
-                  <FontAwesomeIcon className= {styles.hostRatingGrey}icon= {faStar} />
+                  <FontAwesomeIcon className= {item.rating > 0 ? styles.hostRatingOrange : styles.hostRatingGrey }icon= {faStar} />
+                  <FontAwesomeIcon className= {item.rating > 1 ? styles.hostRatingOrange : styles.hostRatingGrey }icon= {faStar} />
+                  <FontAwesomeIcon className= {item.rating > 2 ? styles.hostRatingOrange : styles.hostRatingGrey }icon= {faStar} />
+                  <FontAwesomeIcon className= {item.rating > 3 ? styles.hostRatingOrange : styles.hostRatingGrey }icon= {faStar} />
+                  <FontAwesomeIcon className= {item.rating > 4 ? styles.hostRatingOrange : styles.hostRatingGrey }icon= {faStar} />
                 </div>
             </div>
 
@@ -66,8 +64,6 @@ const LogementInformation = () => {
         ))}
       </div>
 
-    
-    </div>
   );
 };
 

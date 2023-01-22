@@ -87,12 +87,13 @@
   padding: 0.1rem 0.5rem;
 }
 
-/* ========== host ============*/
+/* ====================== host ==================*/
 
 .hostContainer {
   display: flex;
   justify-content: space-between;
   background-color: rgb(43, 150, 226);
+  margin-top: 0.5rem;
 }
 
 .hostInfo {
@@ -107,6 +108,12 @@
   border-radius: 50%;
 }
 
+.hostName {
+  margin-right: 0.5rem;
+}
+
+/* ========== host rating ===========*/
+
 .hostRatingFlex {
   display: flex;
   margin-right: 0.2rem;
@@ -117,10 +124,12 @@
 .hostRatingGrey {
 
   color: grey;
+  margin-left: 0.2rem;
 }
 
 .hostRatingOrange {
-
+  
+  margin-left: 0.2rem;
   color: rgb(240, 90, 21);
 }
 
