@@ -20,13 +20,12 @@ const HomeGrid = () => {
 
         {data.map((item) => (
 
-          <Link to={`/logement/${item.id}`}>
+          <Link  key={item.id} to={`/logement/${item.id}`}>
 
-          <div id={item.id} className= {styles.item}>
-            
-            {/* <img src={item.pictures[1]} className= {styles.itemImage} alt='description'/> */}
-            <h3 className= {styles.itemTitle}>{item.title}</h3>
-          </div>
+            <div id={item.id} className= {styles.item}>
+              
+              <h3 className= {styles.itemTitle}>{item.title}</h3>
+            </div>
           </Link>
         ))}
 

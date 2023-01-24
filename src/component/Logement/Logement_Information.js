@@ -27,37 +27,37 @@ const LogementInformation = () => {
 
         {data.map((item) => (
             
-          <div id={item.id} className= {styles.infoContainer}>
+          <div key={item.id} id={item.id} className= {styles.infoContainer}>
 
 
             <div className= {styles.infoLocation}>
 
-                  <h1>{item.title}</h1>
-                  <h2>{item.location}</h2>
+              <h1>{item.title}</h1>
+              <h2>{item.location}</h2>
 
-                  <div className= {styles.infoTagsContainer}>
-                    {item.tags.map(element => (
-                      <p className= {styles.infoTagsItem}>{element}</p>
-                    ))}
-                  </div>
+              <div className= {styles.infoTagsContainer}>
+                {item.tags.map(element => (
+                  <p className= {styles.infoTagsItem}>{element}</p>
+                ))}
+              </div>
             </div>
 
             <div className= {styles.hostContainer}>
 
-                <div className= {styles.hostInfo}>
+              <div className= {styles.hostInfo}>
 
-                  <p className= {styles.hostName}>{item.host.name}</p>
-                  <img src={item.host.picture} className= {styles.hostImage} alt='description'/>
-                </div>
+                <p className= {styles.hostName}>{item.host.name}</p>
+                <img src={item.host.picture} className= {styles.hostImage} alt='description'/>
+              </div>
                 
-                <div className= {styles.hostRatingFlex}>
+              <div className= {styles.hostRatingFlex}>
 
                   <FontAwesomeIcon className= {item.rating > 0 ? styles.hostRatingOrange : styles.hostRatingGrey }icon= {faStar} />
                   <FontAwesomeIcon className= {item.rating > 1 ? styles.hostRatingOrange : styles.hostRatingGrey }icon= {faStar} />
                   <FontAwesomeIcon className= {item.rating > 2 ? styles.hostRatingOrange : styles.hostRatingGrey }icon= {faStar} />
                   <FontAwesomeIcon className= {item.rating > 3 ? styles.hostRatingOrange : styles.hostRatingGrey }icon= {faStar} />
                   <FontAwesomeIcon className= {item.rating > 4 ? styles.hostRatingOrange : styles.hostRatingGrey }icon= {faStar} />
-                </div>
+              </div>
             </div>
 
           </div>

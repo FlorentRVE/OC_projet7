@@ -41,17 +41,17 @@ const LogementCarrousel = () => {
 
       {data.map((item) => (
             
-        <div id={item.id} className={styles.carouselDiv}>
+        <div key={item.id} id={item.id} className={styles.carouselDiv}>
 
           <img src={item.pictures[Index]} className= {styles.carrouselImage} alt='description'/>
 
 
-            <div className={styles.carrouselArrow}>
+            <div className={styles.carrouselArrow} style={{display: item.pictures.length === 1 ? 'none' : 'show' }}>
               <FontAwesomeIcon onClick={previousImage} icon= { faChevronLeft } />
               <FontAwesomeIcon onClick={nextImage} icon= { faChevronRight } />
             </div>
 
-            <p className= {styles.carrouselLength}>{Index + 1 + '/' + data[0].pictures.length}</p>
+            <p className= {styles.carrouselLength} style={{display: item.pictures.length === 1 ? 'none' : 'show' }}>{Index + 1 + '/' + data[0].pictures.length}</p>
 
         </div>
 

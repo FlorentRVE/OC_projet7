@@ -11,7 +11,9 @@ import {createBrowserRouter} from "react-router-dom";
         
     { path: "/about", element: <About />, errorElement:<Error />},
 
-    { path: "/logement/:id", element: <Logement />, errorElement:<Error />}
+    { path: "/logement/:id", element: <Logement />, errorElement:<Error />},
+
+    { path: "/404", element: <Error />}
 
   ]);
 
