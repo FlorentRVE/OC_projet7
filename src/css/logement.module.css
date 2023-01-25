@@ -141,24 +141,6 @@
   width: 100%;
 }
 
-.div {
-  background-color: rgb(240, 245, 245);
-}
-.collapseContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: red;
-  padding: 0 1rem;
-  border-radius: 5px;
-  height: 2rem;
-}
-
-.collapseTitle, .arrow {
-  font-size: 1rem;
-  color: aliceblue;
-}
-
 .collapseText {
   height: auto;
   padding: 0.5rem;

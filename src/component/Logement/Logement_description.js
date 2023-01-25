@@ -6,9 +6,11 @@ import { useParams } from 'react-router-dom';
 import * as api from '../../utils/api';
 
 
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+// import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import AboutCollapse from '../About/About_collapse';
 
 import styles from '../../css/logement.module.css'
 
@@ -18,7 +20,7 @@ const LogementDescription = () => {
   const id = params.id;
 
   const [data, setData] = useState([]);
-  const [collapse, setCollapse] = useState(styles.isClosed);
+  // const [collapse, setCollapse] = useState(styles.isClosed);
   
   useEffect(() => {
     api.getItem(id).then((data) => {
@@ -32,17 +34,13 @@ const LogementDescription = () => {
       
       {data.map((item) => (
             
-        <div id={item.id} className= {styles.item}>
+        <div key={item.id} id={item.id} className= {styles.item}>
 
-              <div className= {styles.div}>
-                <div className= {styles.collapseContainer} onClick={() => setCollapse(collapse === styles.isClosed ? styles.isOpen : styles.isClosed)}>
-                  <h2 className= {styles.collapseTitle}>Description</h2>
-                  <FontAwesomeIcon icon={collapse === styles.isClosed ? faChevronDown : faChevronUp} className={styles.arrow}/>
-                </div>
-                <div className={collapse}>
-                  <p className= {styles.collapseText}>{item.description}</p>
-                </div>
-              </div>
+              <AboutCollapse AboutCollapse title = {'Description'}>
+
+                <p className= {styles.collapseText}>{item.description}</p>
+
+              </AboutCollapse >
         </div>
       ))}      
     </div>    

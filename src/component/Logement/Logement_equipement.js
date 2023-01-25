@@ -5,9 +5,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import * as api from '../../utils/api';
 
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import AboutCollapse from '../About/About_collapse';
 
 import styles from '../../css/logement.module.css'
 
@@ -15,9 +13,9 @@ const LogementEquipement = () => {
 
   const params = useParams();
   const id = params.id;
+  let compteur = 0;
 
   const [data, setData] = useState([]);
-  const [collapse, setCollapse] = useState(styles.isClosed);
   
   useEffect(() => {
     api.getItem(id).then((data) => {
@@ -31,21 +29,17 @@ const LogementEquipement = () => {
 
       {data.map((item) => (
             
-        <div id={item.id} className= {styles.item}>
+        <div key={item.id} id={item.id} className= {styles.item}>
 
-              <div className= {styles.div}>
-                <div className= {styles.collapseContainer} onClick={() => setCollapse(collapse === styles.isClosed ? styles.isOpen : styles.isClosed)}>
-                  <h2 className= {styles.collapseTitle}>Equipements</h2>
-                  <FontAwesomeIcon icon={collapse === styles.isClosed ? faChevronDown : faChevronUp} className={styles.arrow}/>
-                </div>
-                <div className={collapse}>
-                  <div>
+              <AboutCollapse AboutCollapse title = {'Equipement'}>
+
+              <div>
                     {item.equipments.map(element => (
-                      <p className= {styles.collapseTextEquipement}>{element}</p>
+                      <p key={item.id + `${compteur ++}`}  className= {styles.collapseTextEquipement}>{element}</p>
                     ))}
-                  </div>
-                </div>
               </div>
+
+              </AboutCollapse >
         </div>
       ))}      
     </div>

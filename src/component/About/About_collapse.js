@@ -19,7 +19,7 @@ const AboutCollapse = (props) => {
             <FontAwesomeIcon icon={collapse === styles.isClosed ? faChevronDown : faChevronUp} className={styles.arrow}/>
         </div>
         <div className={collapse}>
-          <p className= {styles.collapse}>{props.description}</p>
+          {props.children}
         </div>
       </div>
     );

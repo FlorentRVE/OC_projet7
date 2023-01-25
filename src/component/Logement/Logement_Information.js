@@ -12,6 +12,7 @@ const LogementInformation = () => {
 
   const params = useParams();
   const id = params.id;
+  let compteur = 0;
 
   const [data, setData] = useState([]);
   
@@ -27,7 +28,7 @@ const LogementInformation = () => {
 
         {data.map((item) => (
             
-          <div key={item.id} id={item.id} className= {styles.infoContainer}>
+          <div key={item.id}  id={item.id} className= {styles.infoContainer}>
 
 
             <div className= {styles.infoLocation}>
@@ -37,7 +38,7 @@ const LogementInformation = () => {
 
               <div className= {styles.infoTagsContainer}>
                 {item.tags.map(element => (
-                  <p className= {styles.infoTagsItem}>{element}</p>
+                  <p key={item.id + `${compteur ++}`} className= {styles.infoTagsItem}>{element}</p>
                 ))}
               </div>
             </div>
