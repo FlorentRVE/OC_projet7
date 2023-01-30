@@ -1,40 +1,8 @@
-.titleBox {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: red;
-    padding: 0 1rem;
-    border-radius: 5px;
-    height: 2rem;
-}
+/* ================= About =================== */
 
-.title, .arrow {
-    font-size: 1rem;
-    color: aliceblue;
-}
-
-.collapse {
+.collapseTextAbout {
     height: auto;
-    padding-bottom: 1rem;
+    padding: 0.5rem;
     color: rgb(232, 81, 81);
-}
-
-.container, .collapse {
-    background-color: rgb(243, 235, 235);
-    width: 100%;
-    margin: 1rem auto;
-    border-radius: 15px;
-
-}
-
-/* ============== Gestion Collapse ================ */
-
-.isClosed {
-    overflow: hidden;
-    transition: height 1s ease-out;
-    height: 0;
-}
-
-.isOpen {
-    height: auto;
-}
+    font-weight: 400;
+  }

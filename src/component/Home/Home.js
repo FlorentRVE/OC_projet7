@@ -3,7 +3,7 @@
 import React from 'react';
 
 import Header from '../Header';
-import HomeImg from './Home_img';
+import Img from '../Img';
 import HomeGrid from './Home_grid';
 import Footer from '../Footer';
 
@@ -15,7 +15,7 @@ const Home = () => {
       
       < Header/>
 
-      < HomeImg />
+      < Img src = '/images/IMG.png' text = 'Chez vous, partout et ailleurs'/>
 
       < HomeGrid />
 

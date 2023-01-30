@@ -1,0 +1,26 @@
+/* ============= Composant image ============== */
+.image {
+  border-radius: 10px;
+  height: 8em;
+  margin: 0.4rem auto 1rem auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.bg {
+  background-color: #00000056; 
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+
+.imageTxt {
+  color: rgb(255, 255, 255);
+  font-size: 1.4rem;
+  margin-left: 1rem;
+
+}

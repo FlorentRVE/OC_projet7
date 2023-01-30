@@ -1,0 +1,43 @@
+/* ================= Collapse =================== */
+
+.titleBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#FF6060;
+    padding: 0 1rem;
+    border-radius: 5px;
+    height: 2.5rem;
+}
+
+.title, .arrow {
+    font-size: 1rem;
+    color: aliceblue;
+}
+
+.collapse {
+    height: auto;
+    padding-bottom: 1rem;
+}
+
+.container, .collapse {
+    background-color:#F7F7F7;
+    width: 100%;
+    margin: 1rem auto;
+    
+    border-radius: 15px;
+
+}
+
+/* ============== Gestion Collapse ================ */
+
+.isClosed {
+    overflow: hidden;
+    transition: height 1s ease-out;
+    height: 0;
+}
+
+.isOpen {
+    height: auto;
+    padding-bottom: 1rem;
+}

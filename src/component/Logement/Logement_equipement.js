@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import * as api from '../../utils/api';
 
-import AboutCollapse from '../About/About_collapse';
+import Collapse from '../Collapse';
 
 import styles from '../../css/logement.module.css'
 
@@ -31,7 +31,7 @@ const LogementEquipement = () => {
             
         <div key={item.id} id={item.id} className= {styles.item}>
 
-              <AboutCollapse AboutCollapse title = {'Equipement'}>
+              <Collapse AboutCollapse title = {'Equipement'}>
 
               <div>
                     {item.equipments.map(element => (
@@ -39,7 +39,7 @@ const LogementEquipement = () => {
                     ))}
               </div>
 
-              </AboutCollapse >
+              </Collapse >
         </div>
       ))}      
     </div>

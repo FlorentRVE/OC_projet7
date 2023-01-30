@@ -1,9 +1,25 @@
 .footer {
-    background-color: black;
-    color: aliceblue;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    width: 100%;
+    padding: 3rem 0;
+    margin-top: 8rem;
+    background-color: black;
+    color: aliceblue;
+
+}
+
+.footer_img {
+    height: auto;
+    width: 8rem;
+
+    margin-bottom: 1rem;
+
+}
+
+.footer_text {
+    font-size: 0.8rem;
 
 }

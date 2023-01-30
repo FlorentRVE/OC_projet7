@@ -5,12 +5,8 @@ function Footer() {
   return (
     
     <footer className= {styles.footer}>
-      
-      <div>
-        
-        <p> Logo KASA</p>
-        <p>2020 Kasa. All right reserved</p>
-      </div>
+      <img  className= {styles.footer_img} src='/images/LOGO_FOOTER.png' alt='Logo X'/>
+      <p className= {styles.footer_text}>© 2020 Kasa. All right reserved</p>
     </footer>
   );
 }

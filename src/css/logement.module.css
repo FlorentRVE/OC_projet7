@@ -8,6 +8,7 @@
 
 .carouselDiv  {
   position: relative;
+  margin-top: 1.5rem;
 
 }
 
@@ -16,6 +17,7 @@
   width: 100%;
   top: 250px;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .carrouselArrow {
@@ -46,33 +48,19 @@
 /*============ Information location et host ============== */
 
 .infoContainer {
-
   display: flex;
   flex-direction: column;
-}
-
-@media screen and (min-width: 480px) {
-  .infoContainer {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-.infoLocation {
-  background-color: rgb(215, 208, 208);
-}
-
-.infoLocation > h1, h2 {
-  color: rgb(228, 12, 12);
 }
 
 .infoLocation > h1 {
   font-size: 1.5rem;
   text-transform: uppercase;
+  color: #FF6060;
 }
 
 .infoLocation > h2 {
   font-size: 1rem;
+  color: #FF6060;
 }
 
 .infoTagsContainer {
@@ -80,11 +68,13 @@
 }
 
 .infoTagsItem {
-  background-color: rgb(176, 38, 38);
+  background-color: #FF6060;
   border-radius: 5px;
   color: white;
-  margin: 0 0.5rem;
-  padding: 0.1rem 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.2rem 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
 /* ====================== host ==================*/
@@ -92,12 +82,9 @@
 .hostContainer {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(43, 150, 226);
-  margin-top: 0.5rem;
 }
 
 .hostInfo {
-  background-color: rgb(142, 34, 213);
   display: flex;
   order: 2;
 }
@@ -110,6 +97,8 @@
 
 .hostName {
   margin-right: 0.5rem;
+  color: #FF6060;
+  
 }
 
 /* ========== host rating ===========*/
@@ -130,52 +119,41 @@
 .hostRatingOrange {
   
   margin-left: 0.2rem;
-  color: rgb(240, 90, 21);
+  color:#FF6060;
 }
 
 /*============ Description et équipement ============== */
 
 .collapseDiv {
-  margin: 1.5rem auto;
   flex: 1;
-  width: 100%;
 }
 
-.collapseText {
+.collapseTextDescription {
   height: auto;
   padding: 0.5rem;
   color: rgb(232, 81, 81);
+  font-weight: 400;
 }
 
 .collapseTextEquipement {
   height: auto;
   line-height: 0.1rem;
   color: rgb(232, 81, 81);
+  font-weight: 400;
+  padding: 0.5rem;
 }
-
-/* ============== Gestion Collapse ================ */
-
-.isClosed {
-  overflow: hidden;
-  transition: height 1s ease-out;
-  height: 0;
-}
-
-.isOpen {
-  height: auto;
-}
-
 
 /* ======================= Media query ============================= */
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 692px) {
   .collapseFlex {
     flex-direction: row;
-    gap: 2rem;
+    gap: 5rem;
   }
 
   .hostContainer {
     flex-direction: column;
+    justify-content: space-evenly;
   }
 
   .hostInfo {
@@ -184,5 +162,10 @@
 
   .hostRatingFlex {
     order: 2;
+  }
+
+  .infoContainer {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }

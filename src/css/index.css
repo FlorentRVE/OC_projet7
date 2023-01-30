@@ -1,3 +1,14 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
 body {
     margin: 0 auto;
+    width: 92%;
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
 }

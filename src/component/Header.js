@@ -12,7 +12,7 @@ function Header() {
 
       <nav className= {styles.nav}>
 
-        <p> Logo KASA</p>
+        <img src='/images/LOGO.png' alt='Logo X'/>
 
         <div className= {styles.menu}>
 
