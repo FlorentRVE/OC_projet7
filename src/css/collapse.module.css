@@ -39,5 +39,14 @@
 
 .isOpen {
     height: auto;
-    padding-bottom: 1rem;
+    padding: 0.8rem 0;
+}
+
+
+/* ================== MEDIA QUERIE ======================= */
+
+@media screen and (min-width: 692px) {
+    .isOpen {
+        min-height: 150px;
+    }
 }
