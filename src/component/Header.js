@@ -21,7 +21,7 @@ function Header() {
           </p>
 
           <p>
-            <Link to="/about" className= {styles.menuItem} style={{ textDecoration: pathname === '/about' ? 'underline' : 'none' }}>A propos</Link>
+            <Link to="/about" className= {styles.menuItem} style={{ textDecoration: pathname === '/about' ? 'underline' : 'none' }}>A Propos</Link>
           </p>
         </div>
       </nav>

@@ -22,6 +22,16 @@ img {
     margin-right: 1rem;
     color: #FF6060;
     text-decoration: none;
+    font-size: 1rem;
     text-transform: uppercase;
-    font-size: 1rem
+}
+
+/* ======================= MEDIA QUERIE ============================ */
+
+@media screen and (min-width: 692px) {
+    .menuItem {
+        text-transform:none;
+        font-size: 1.2rem;
+        margin-left: 1.5rem;
+    }
 }
