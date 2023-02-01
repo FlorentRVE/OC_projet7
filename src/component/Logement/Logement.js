@@ -1,4 +1,4 @@
-// Exemple d'utilisation d'une fonction de notre fichier api.js
+//=============================== Composant Logement ==========================
 
 import React from 'react';
 import { useParams, Navigate} from 'react-router-dom';
@@ -13,41 +13,44 @@ import LogementEquipement from './Logement_equipement';
 import Footer from '../Footer';
 
 import styles from '../../css/logement.module.css'
+import style from '../../css/global.module.css'
 
 const Logement = () => {
 
-  const params = useParams();
+  const params = useParams(); // Récupération de l'ID dans l'URL.
   const id = params.id;
 
-  const [data, setData] = useState({});
+  const [data, setData] = useState({}); // Création du state data.
   
   useEffect(() => {
     api.getItem(id).then((data) => {
-      setData(data[0]);
+      setData(data[0]); // On modifie data pour lui donner la valeur des données récupérées via getItem en utilisant l'ID.
 
     });
   }, [id]);
 
   if(data === undefined) {
-    return <Navigate to="/404" />;
+    return <Navigate to="/404" />; // Redirection vers la page d'erreur si ID non présent dans le json.
   }
 
   return (
     <div>
-      
-      < Header/>
+        <div className={style.width}>
+                
+          < Header/>
 
-      < LogementCarrousel />
+          < LogementCarrousel />
 
-      < LogementInformation />
+          < LogementInformation />
 
-      <div className= {styles.collapseFlex}>
+          <div className= {styles.collapseFlex}>
 
-      < LogementDescription />
+            < LogementDescription />
 
-      < LogementEquipement />
+            < LogementEquipement />
 
-      </div>
+          </div>
+        </div>
 
       <Footer />
     

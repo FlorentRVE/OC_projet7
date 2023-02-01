@@ -1,5 +1,9 @@
+//=============================== Composant Img ==========================
+
 import React from 'react';
 import styles from '../css/img.module.css'
+
+// Props.src et props.text permettent la réutilisation du composant de manière dynamique.
 
 const Img = (props) => {
 

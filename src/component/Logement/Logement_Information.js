@@ -1,24 +1,24 @@
-// Exemple d'utilisation d'une fonction de notre fichier api.js
+//=============================== Information Logement ==========================
 
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import * as api from '../../utils/api';
-import styles from '../../css/logement.module.css'
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import * as api from '../../utils/api';
+import styles from '../../css/logement.module.css'
 
 const LogementInformation = () => {
 
   const params = useParams();
-  const id = params.id;
-  let compteur = 0;
+  const id = params.id; // Récupération de l'ID dans l'URL.
+  let compteur = 0; // Compteur utilisé pour générer un attribut "key" unique.
 
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([]); // Création du state data.
   
   useEffect(() => {
     api.getItem(id).then((data) => {
-      setData(data);
+      setData(data); // On modifie data pour lui donner la valeur des données récupérées via getItem en utilisant l'ID.
     });
   }, [id]);
 
@@ -30,7 +30,7 @@ const LogementInformation = () => {
             
           <div key={item.id}  id={item.id} className= {styles.infoContainer}>
 
-
+            {/* ================== Informations sur le logement ================ */}
             <div className= {styles.infoLocation}>
 
               <h1>{item.title}</h1>
@@ -42,13 +42,14 @@ const LogementInformation = () => {
                 ))}
               </div>
             </div>
-
+            
+            {/* ==================== Informations sur l'hôte ===================== */}
             <div className= {styles.hostContainer}>
 
               <div className= {styles.hostInfo}>
 
                 <p className= {styles.hostName}>{item.host.name}</p>
-                <img src={item.host.picture} className= {styles.hostImage} alt='description'/>
+                <img src={item.host.picture} className= {styles.hostImage} alt="Portrait de l'hôte"/>
               </div>
                 
               <div className= {styles.hostRatingFlex}>

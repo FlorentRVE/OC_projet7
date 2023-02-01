@@ -50,7 +50,6 @@
 .infoContainer {
   display: flex;
   flex-direction: column;
-  line-height: 0.8rem;
   margin-top: 0.5rem;
 }
 
@@ -178,5 +177,6 @@
   .infoContainer {
     flex-direction: row;
     justify-content: space-between;
+    /* line-height: 0.8rem; */
   }
 }

@@ -4,6 +4,8 @@ import Error from './component/Error';
 import Logement from './component/Logement/Logement';
 
 import {createBrowserRouter} from "react-router-dom";
+
+// Affectation des routes au endpoint correspondant avec page d'erreur par défaut
   
   const router = createBrowserRouter([
     

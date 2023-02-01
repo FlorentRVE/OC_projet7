@@ -1,23 +1,24 @@
-// Exemple d'utilisation d'une fonction de notre fichier api.js
+//=============================== Description Logement ==========================
 
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import * as api from '../../utils/api';
-
 import Collapse from '../Collapse';
 import styles from '../../css/logement.module.css'
 
+// Utilisation du composant réutilisable "Collapse" avec props.title et props.children.
+
 const LogementDescription = () => {
 
-  const params = useParams();
+  const params = useParams(); // Récupération de l'ID dans l'URL.
   const id = params.id;
 
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([]); // Création du state data.
   
   useEffect(() => {
     api.getItem(id).then((data) => {
-      setData(data);
+      setData(data); // On modifie data pour lui donner la valeur des données récupérées via getItem en utilisant l'ID.
     });
   }, [id]);
 
@@ -29,7 +30,7 @@ const LogementDescription = () => {
             
         <div key={item.id} id={item.id} className= {styles.item}>
 
-              <Collapse AboutCollapse title = {'Description'}>
+              <Collapse title = {'Description'}>
 
                 <p className= {styles.collapseTextDescription}>{item.description}</p>
 

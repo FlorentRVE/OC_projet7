@@ -1,10 +1,13 @@
+//=============================== Header ==========================
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from '../css/header.module.css'
-import { useLocation } from 'react-router-dom';
+
+// Utilisation de pathname pour souligner le texte du menu selon la page visitée.
 
 function Header() {
-
+  
   const { pathname } = useLocation();
 
   return (
@@ -14,16 +17,16 @@ function Header() {
 
         <img src='/images/LOGO.png' alt='Logo X'/>
 
-        <div className= {styles.menu}>
+          <div className= {styles.menu}>
 
-          <p>
-            <Link to="/" className= {styles.menuItem} style={{ textDecoration: pathname === '/' ? 'underline' : 'none' }}>Accueil</Link>
-          </p>
+            <p>
+              <Link to="/" className= {styles.menuItem} style={{ textDecoration: pathname === '/' ? 'underline' : 'none' }}>Accueil</Link>
+            </p>
 
-          <p>
-            <Link to="/about" className= {styles.menuItem} style={{ textDecoration: pathname === '/about' ? 'underline' : 'none' }}>A Propos</Link>
-          </p>
-        </div>
+            <p>
+              <Link to="/about" className= {styles.menuItem} style={{ textDecoration: pathname === '/about' ? 'underline' : 'none' }}>A Propos</Link>
+            </p>
+          </div>
       </nav>
     </header>
   );

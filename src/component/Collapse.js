@@ -1,4 +1,4 @@
-// Composant Collapse
+//===================================== Composant Collapse ===============================
 
 import React from 'react';
 import { useState} from 'react';
@@ -6,11 +6,15 @@ import { useState} from 'react';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import styles from '../css/collapse.module.css';
+
+// Au click, collapse change d'état grâce à setCollapse, passant de fermé à ouvert et vice versa.
+// Props.title et props.children permettent la réutilisation du composant de manière dynamique.
 
 const Collapse = (props) => {
 
-    const [collapse, setCollapse] = useState(styles.isClosed);
+    const [collapse, setCollapse] = useState(styles.isClosed); // On crée l'état collapse "fermé" par défaut
 
     return (
       <div className= {styles.container}>

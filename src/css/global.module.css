@@ -4,11 +4,13 @@
     font-weight: 500;
 }
 
-body {
+.width {
     margin: 0 auto;
     width: 92%;
+}
 
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 500;
+@media screen and (min-width: 692px) {
+    .width {
+        width: 85%
+    }
 }
