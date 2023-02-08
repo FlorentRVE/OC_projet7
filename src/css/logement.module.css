@@ -149,7 +149,7 @@
 
 /* ======================= Media query ============================= */
 
-@media screen and (min-width: 692px) {
+@media screen and (min-width: 480px) {
   .collapseFlex {
     flex-direction: row;
     gap: 5rem;

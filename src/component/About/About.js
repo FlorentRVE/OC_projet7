@@ -16,7 +16,7 @@ const About = () => {
         <div className={styles.width}>
             < Header/>
 
-            < Img  src = {window.innerWidth < 692 ? '/images/IMG_ABOUT_mobile.png' : '/images/IMG_ABOUT.png'} text = '' height = '15rem'/>
+            < Img  src = {window.innerWidth < 480 ? '/images/IMG_ABOUT_mobile.png' : '/images/IMG_ABOUT.png'} text = '' height = '15rem'/>
 
             < AboutCollapse title = {'Fiabilité'} description = {'Les annonces postées sur Kasa garantissent une fiablité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.'}/>
 

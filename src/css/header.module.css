@@ -28,7 +28,7 @@ img {
 
 /* ======================= MEDIA QUERIE ============================ */
 
-@media screen and (min-width: 692px) {
+@media screen and (min-width: 480px) {
     .menuItem {
         text-transform:none;
         font-size: 1rem;

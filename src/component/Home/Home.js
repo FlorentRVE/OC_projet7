@@ -17,7 +17,7 @@ const Home = () => {
     <div className={styles.width}>
       < Header/>
 
-      < Img src = {window.innerWidth < 692 ? '/images/IMG_mobile.png' : '/images/IMG.png'} text = 'Chez vous, partout et ailleurs' height = '9rem'/>
+      < Img src = {window.innerWidth < 480 ? '/images/IMG_mobile.png' : '/images/IMG.png'} text = 'Chez vous, partout et ailleurs' height = '9rem'/>
 
       < HomeGrid/>
     </div>

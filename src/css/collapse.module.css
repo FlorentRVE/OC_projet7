@@ -45,7 +45,7 @@
 
 /* ================== MEDIA QUERIE ======================= */
 
-@media screen and (min-width: 692px) {
+@media screen and (min-width: 480px) {
     .isOpen {
         min-height: 150px;
     }
