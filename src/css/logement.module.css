@@ -15,7 +15,6 @@
 .carrouselImage {
   height: 300px;
   width: 100%;
-  top: 250px;
   object-fit: cover;
   border-radius: 10px;
 }

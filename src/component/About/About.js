@@ -4,7 +4,7 @@ import Header from '../Header';
 import Footer from '../Footer';
 import Img from '../Img';
 import AboutCollapse from './About_collapse';
-import styles from '../../css/global.module.css'
+import styles from '../../css/global.module.css';
 
 // Utilisation des composant Img et AboutCollapse de manière dynamique avec les props.
 
@@ -16,7 +16,7 @@ const About = () => {
         <div className={styles.width}>
             < Header/>
 
-            < Img  src = '/images/IMG_ABOUT.png' text = ''/>
+            < Img  src = {window.innerWidth < 692 ? '/images/IMG_ABOUT_mobile.png' : '/images/IMG_ABOUT.png'} text = '' height = '15rem'/>
 
             < AboutCollapse title = {'Fiabilité'} description = {'Les annonces postées sur Kasa garantissent une fiablité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.'}/>
 
