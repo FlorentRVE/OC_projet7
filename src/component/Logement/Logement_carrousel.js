@@ -15,15 +15,16 @@ const LogementCarrousel = () => {
   const id = params.id;
 
   const [data, setData] = useState([]); 
-  const [Index, setIndex] = useState(0); // Création du state data et Index
+  const [Index, setIndex] = useState(0); // Création du state data et Index, ce dernier servira à se situer dans l'array du carroussel.
   
   useEffect(() => {
-    api.getItem(id).then((data) => {
+    api.getItem(id).then((data) => { // Récupération des données avec getItem().
       setData(data); // On modifie data pour lui donner la valeur des données récupérées via getItem en utilisant l'ID.
     });
   }, [id]);
 
 // Modification du state Index selon la fonction appelée au click sur les flèches gauche/droite.
+
   const previousImage = () => {
     const newIndex = Index - 1;
     setIndex(newIndex < 0 ? data[0].pictures.length - 1 : newIndex);

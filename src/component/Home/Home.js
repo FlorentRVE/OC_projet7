@@ -14,16 +14,17 @@ const Home = () => {
   return (
     <div>
       
-    <div className={styles.width}>
-      < Header/>
+      <div className={styles.width}>
 
-      < Img src = {window.innerWidth < 480 ? '/images/IMG_mobile.png' : '/images/IMG.png'} text = 'Chez vous, partout et ailleurs' height = '9rem'/>
+        < Header/>
 
-      < HomeGrid/>
-    </div>
+        < Img src = {window.innerWidth < 480 ? '/images/IMG_mobile.png' : '/images/IMG.png'} text = 'Chez vous, partout et ailleurs' height = '9rem'/>
+
+        < HomeGrid/>
+        
+      </div>
 
       < Footer/>
-
     
     </div>
   );

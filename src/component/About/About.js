@@ -14,6 +14,7 @@ const About = () => {
 
     <div>
         <div className={styles.width}>
+            
             < Header/>
 
             < Img  src = {window.innerWidth < 480 ? '/images/IMG_ABOUT_mobile.png' : '/images/IMG_ABOUT.png'} text = '' height = '15rem'/>

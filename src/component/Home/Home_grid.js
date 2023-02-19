@@ -6,18 +6,20 @@ import { Link } from 'react-router-dom';
 import * as api from '../../utils/api';
 import styles from '../../css/home.module.css'
 
-// Utilisation de la fonction getData défini dans le fichier api.js pour récupérer les données des logements
+// Utilisation de la fonction getData() défini dans le fichier api.js pour récupérer les données des logements
 // depuis le json et les afficher.
 
 const HomeGrid = () => {
 
-    const [data, setData] = useState([]); // Création du state data. 
+    const [data, setData] = useState([]); // Création du state data qui va accueillir nos données. 
   
     useEffect(() => {
-      api.getData().then((data) => {
+      api.getData().then((data) => { // Récupération des données avec getData().
         setData(data); // On modifie data pour lui donner la valeur des données récupérées via getData.
       });
     }, []);
+
+    // Puis on utilise data.map() pour parcourir et manipuler les données.
   
     return (
 

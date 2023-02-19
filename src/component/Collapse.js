@@ -9,12 +9,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import styles from '../css/collapse.module.css';
 
-// Au click, collapse change d'état grâce à setCollapse, passant de fermé à ouvert et vice versa.
+// La valeur "collapse" initialisé avec useState permet de déterminer si le composant est ouvert ou fermé selon la classe CSS affecté à la valeur.
+// Au clique, si "collapse" vaut "styles.isClosed" il passe à "styles.isOpen" et vice versa selon la valeur initiale.
 // Props.title et props.children permettent la réutilisation du composant de manière dynamique.
 
 const Collapse = (props) => {
 
-    const [collapse, setCollapse] = useState(styles.isClosed); // On crée l'état collapse "fermé" par défaut
+    const [collapse, setCollapse] = useState(styles.isClosed); // La valeur de collapse correspond à "fermé" par défaut
 
     return (
       <div className= {styles.container}>

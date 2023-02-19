@@ -1,4 +1,4 @@
-//=============================== Composant Img ==========================
+//=============================== Composant Image réutilisable ==========================
 
 import React from 'react';
 import styles from '../css/img.module.css'
